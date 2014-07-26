@@ -5,7 +5,9 @@ PRODUCT_COPY_FILES += \
 ## Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/cdma.mk)
 
-TARGET_BOOTANIMATION_NAME := vertical-720x1280
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -20,9 +22,9 @@ PRODUCT_RELEASE_NAME := Spectrum
 PRODUCT_VERSION_DEVICE_SPECIFIC :=
 
 ## Device identifier. This must come after all inclusions
-TARGET_PRODUCT := cm_vs920
+PRODUCT_DEVICE := vs920
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=i_vzw TARGET_DEVICE=i_vzw BUILD_FINGERPRINT=Verizon/i_vzw/i_vzw:4.0.4/IMM76D/VS920ZV7.47e5065f:user PRIVATE_BUILD_DESC="i_vzw-user 4.0.4 IMM76D 47e5065f release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=i_vzw BUILD_FINGERPRINT=Verizon/i_vzw/i_vzw:4.0.4/IMM76D/VS920ZV7.47e5065f:user PRIVATE_BUILD_DESC="i_vzw-user 4.0.4 IMM76D 47e5065f release-keys"
 
 # Enable Torch
 PRODUCT_PACKAGES += Torch WiFiDirectDemo
